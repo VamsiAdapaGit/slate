@@ -74,10 +74,8 @@ html, body {
   // This is the logo at the top of the ToC
   .logo {
     display: block;
-    max-width: 70%;
-    margin: auto;
+    max-width: 100%;
     margin-bottom: $logo-margin;
-    margin-top: $logo-margin;
   }
 
   &>.search {
@@ -188,21 +186,9 @@ html, body {
     }
 
     a:hover {
-      text-decoration: none;
-    }
-    
-    a:active {
-      text-decoration: none;
+      text-decoration: underline;
     }
 
-    a:visited {
-      text-decoration: none;
-    }
-
-    a:link {
-      text-decoration: none;
-    }
-    
     li {
       font-size: 0.8em;
       line-height: 1.7;
@@ -312,11 +298,8 @@ html, body {
     }
 
     &.active {
-      // background-color: $lang-select-active-bg;
-      // color: $lang-select-active-text;
-
-      background-color: $nav-active-bg;
-      color: $nav-active-text;
+      background-color: $lang-select-active-bg;
+      color: $lang-select-active-text;
     }
   }
 
@@ -331,10 +314,6 @@ html, body {
 // CONTENT STYLES
 ////////////////////////////////////////////////////////////////////////////////
 // This is all the stuff with the light background in the left half of the page
-
-.content{
-  margin-right: 30px;
-}
 
 .content {
   // fixes webkit rendering bug for some: see #538
@@ -655,28 +634,4 @@ html, body {
 
 .copy-clipboard:hover {
   opacity: 0.8;
-}
-
-
-a{
-  color: #6c8eef;
-}
-
-.highlight{
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-}
-
-blockquote p {
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-}
-blockquote {
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-}
-
-.highlight pre{
-  margin-bottom: 30px;
-  box-shadow: 10px 10px 10px black;
 }

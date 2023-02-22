@@ -74,10 +74,8 @@ html, body {
   // This is the logo at the top of the ToC
   .logo {
     display: block;
-    max-width: 70%;
-    margin: auto;
+    max-width: 100%;
     margin-bottom: $logo-margin;
-    margin-top: $logo-margin;
   }
 
   &>.search {
@@ -188,21 +186,9 @@ html, body {
     }
 
     a:hover {
-      text-decoration: none;
-    }
-    
-    a:active {
-      text-decoration: none;
+      text-decoration: underline;
     }
 
-    a:visited {
-      text-decoration: none;
-    }
-
-    a:link {
-      text-decoration: none;
-    }
-    
     li {
       font-size: 0.8em;
       line-height: 1.7;
@@ -268,7 +254,7 @@ html, body {
   z-index: 10;
   background-color: $main-bg;
   min-height: 100%;
-  color:white;
+
   padding-bottom: 1px; // prevent margin overflow
 
   // The dark box is what gives the code samples their dark background.
@@ -312,11 +298,8 @@ html, body {
     }
 
     &.active {
-      // background-color: $lang-select-active-bg;
-      // color: $lang-select-active-text;
-
-      background-color: $nav-active-bg;
-      color: $nav-active-text;
+      background-color: $lang-select-active-bg;
+      color: $lang-select-active-text;
     }
   }
 
@@ -331,10 +314,6 @@ html, body {
 // CONTENT STYLES
 ////////////////////////////////////////////////////////////////////////////////
 // This is all the stuff with the light background in the left half of the page
-
-.content{
-  margin-right: 30px;
-}
 
 .content {
   // fixes webkit rendering bug for some: see #538
@@ -376,6 +355,7 @@ html, body {
     margin-top: 2em;
     border-top: 1px solid #2b3046;
     border-bottom: 1px solid #2b3046;
+    background-color: #ecf0f1;
   }
 
   h1:first-child, div:first-child + h1 {
@@ -391,7 +371,7 @@ html, body {
     border-top: 1px solid #ccc;
     padding-top: 1.2em;
     padding-bottom: 1.2em;
-    
+    background-image: linear-gradient(to bottom, rgba(#fff, 0.2), rgba(#fff, 0));
   }
 
   // h2s right after h1s should bump right up
@@ -655,28 +635,4 @@ html, body {
 
 .copy-clipboard:hover {
   opacity: 0.8;
-}
-
-
-a{
-  color: #6c8eef;
-}
-
-.highlight{
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-}
-
-blockquote p {
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-}
-blockquote {
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-}
-
-.highlight pre{
-  margin-bottom: 30px;
-  box-shadow: 10px 10px 10px black;
 }
